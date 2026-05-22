@@ -25,11 +25,6 @@ export const metadata: Metadata = {
     template: `%s · ${SITE_NAME}`,
   },
   description: SITE_TAGLINE,
-  icons: {
-    icon: [{ url: "/ivnix_icon.svg", type: "image/svg+xml" }],
-    shortcut: "/ivnix_icon.svg",
-    apple: "/ivnix_icon.svg",
-  },
 };
 
 export default function RootLayout({
