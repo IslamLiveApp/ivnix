@@ -1,0 +1,14 @@
+---
+description: After finishing Next.js or front-end work, refresh the dev server so the site does not show a blank/white page from stale chunks.
+alwaysApply: true
+---
+
+# Dev refresh after changes
+
+When a task that touches this app’s UI, routes, or client bundles is **complete** (or before telling the user to verify in the browser):
+
+1. Run **`npm run dev`** from the project root in the background (it already runs `clean`, kills port **3000**, then `next dev`).
+2. If a dev server is already running on 3000, the same script is still correct: it kills that port first, then starts fresh.
+3. Skip only if the user explicitly says not to start or refresh the dev server, or if the change is docs-only with no app impact.
+
+This avoids stale `.next` / webpack chunk issues and white screens after edits.
